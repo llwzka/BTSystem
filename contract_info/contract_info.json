@@ -1,0 +1,511 @@
+{
+    "if":
+    {
+        "margin_ratio": 0.15,
+        "contract_multiplier": 300,
+        "contract_minimal_unit": 0.2,
+        "fees": 0.0003,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:30:00", "11:30:00"],
+            ["13:00:00", "15:00:00"]
+        ]
+    },
+    "ih":
+    {
+        "margin_ratio": 0.15,
+        "contract_multiplier": 300,
+        "contract_minimal_unit": 0.2,
+        "fees": 0.0003,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:30:00", "11:30:00"],
+            ["13:00:00", "15:00:00"]
+        ]
+    },
+    "ic":
+    {
+        "margin_ratio": 0.15,
+        "contract_multiplier": 200,
+        "contract_minimal_unit": 0.2,
+        "fees": 0.0003,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:30:00", "11:30:00"],
+            ["13:00:00", "15:00:00"]
+        ]
+    },
+    "t":
+    {
+        "margin_ratio": 0.01,
+        "contract_multiplier": 1000000,
+        "contract_minimal_unit": 0.005,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:15:00", "11:30:00"],
+            ["13:00:00", "15:15:00"]
+        ]
+    },
+    "tf":
+    {
+        "margin_ratio": 0.01,
+        "contract_multiplier": 1000000,
+        "contract_minimal_unit": 0.005,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:15:00", "11:30:00"],
+            ["13:00:00", "15:15:00"]
+        ]
+    },
+    "rb":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:00:00"]
+        ]
+    },
+    "hc":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:00:00"]
+        ]
+    },
+    "i":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 100,
+        "contract_minimal_unit": 0.5,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "j":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 100,
+        "contract_minimal_unit": 0.5,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "jm":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 60,
+        "contract_minimal_unit": 0.5,
+        "fees": 0,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "zc":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 100,
+        "contract_minimal_unit": 0.2,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "ru":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 5,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:00:00"]
+        ]
+    },
+    "ma":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "bu":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 2,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:00:00"]
+        ]
+    },
+    "l":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 5,
+        "contract_minimal_unit": 5,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"]
+        ]
+    },
+    "pp":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 5,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"]
+        ]
+    },
+    "v":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 5,
+        "contract_minimal_unit": 5,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"]
+        ]
+    },
+    "m":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "rm":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "ap":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"]
+        ]
+    },    
+    "a":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "c":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"]
+        ]
+    },
+    "cs":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"]
+        ]
+    },
+    "cf":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 5,
+        "contract_minimal_unit": 5,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "sr":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "p":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 2,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "y":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 2,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "oi":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 10,
+        "contract_minimal_unit": 2,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "ag":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 15,
+        "contract_minimal_unit": 1,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "2:30:00"]
+        ]
+    },
+    "au":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 1000,
+        "contract_minimal_unit": 0.05,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00",  "15:00:00"],
+            ["21:00:00", "2:30:00"]
+        ]
+    },
+    "ni":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 1,
+        "contract_minimal_unit": 10,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "1:00:00"]
+        ]
+    },
+    "ta":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 5,
+        "contract_minimal_unit": 2,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "23:30:00"]
+        ]
+    },
+    "zn":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 5,
+        "contract_minimal_unit": 5,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "1:00:00"]
+        ]
+    },
+    "cu":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 5,
+        "contract_minimal_unit": 10,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "1:00:00"]
+        ]
+    },
+    "al":
+    {
+        "margin_ratio": 0.1,
+        "contract_multiplier": 5,
+        "contract_minimal_unit": 5,
+        "fees": 0.00005,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:00:00", "10:15:00"],
+            ["10:30:00", "11:30:00"],
+            ["13:30:00", "15:00:00"],
+            ["21:00:00", "1:00:00"]
+        ]
+    }
+}
