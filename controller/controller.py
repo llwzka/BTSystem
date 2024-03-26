@@ -1,8 +1,6 @@
-import quoter
-import datastruct
-import trader
+from quoter import quoter, trader, datastruct
 import pandas as pd
-import datetime
+
 
 class Controller:
     #策略向量为字典，Key为品种名，具体策略保存在Key下，为list
@@ -78,7 +76,7 @@ class Controller:
                     test_customized_tickers = [] 
 
                     #生成策略需要的测试信息
-                    test_info = datastruct.TestInfo(st.strategy_contract(),st.strategy_contract_cycle_unit(),st.strategy_contract_cycle(),self.begin_date,self.end_date)
+                    test_info = datastruct.TestInfo(st.strategy_contract(), st.strategy_contract_cycle_unit(), st.strategy_contract_cycle(), self.begin_date, self.end_date)
                     
                     #将所需策略信息传给strategy
                     st.input_begin_end_date(st.strategy_contract(),self.begin_date,self.end_date)

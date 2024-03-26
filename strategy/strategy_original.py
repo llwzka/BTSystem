@@ -1,7 +1,5 @@
-import quoter
-import trader
-import indicator
-import datastruct
+from quoter import quoter, trader, datastruct
+
 
 class Strategy_original(object):
 
@@ -27,7 +25,7 @@ class Strategy_original(object):
         self.strategy_contract_name = strategy_contract
 
     #更新交易段数据
-    def update_trader_data(self,ticker = datastruct.Ticker()):
+    def update_trader_data(self, ticker = datastruct.Ticker()):
         #更新行情数据
         trader.Trader().input_ticker(ticker)  
 
@@ -45,12 +43,15 @@ class Strategy_original(object):
         #处理日级别数据
         if fre[-1] == 'D':
             if trader.Trader().tickers[-1].time == "9:01:00":
-                test_info =  datastruct.TestInfo(self.strategy_contract_name,'day',fre_n,self.begin_date,trader.Trader().tickers[-2].date)
+                test_info =  datastruct.TestInfo(self.strategy_contract_name, 'day', fre_n, self.begin_date,
+                                                 trader.Trader().tickers[-2].date)
             else:
-                test_info =  datastruct.TestInfo(self.strategy_contract_name,'day',fre_n,self.begin_date,trader.Trader().tickers[-1].date)
+                test_info =  datastruct.TestInfo(self.strategy_contract_name, 'day', fre_n, self.begin_date,
+                                                 trader.Trader().tickers[-1].date)
         #处理分钟级别数据
         elif fre[-1] == 'T':
-            test_info =  datastruct.TestInfo(self.strategy_contract_name,'min',fre_n,self.begin_date,trader.Trader().tickers[-1].date)
+            test_info =  datastruct.TestInfo(self.strategy_contract_name, 'min', fre_n, self.begin_date,
+                                             trader.Trader().tickers[-1].date)
 
         quoter.Quoter().get_customized_quoter_data(test_customized_tickers, test_info)
         if data_type == "close":
@@ -145,11 +146,11 @@ class Strategy_original(object):
     #输出profit
     def output_profit(self):
     
-        print('profit: ',trader.Trader().output_profit())
+        print('profit: ', trader.Trader().output_profit())
     
 
     #输出max_retreat
     def output_max_retreat(self):
     
-        print('max_retreat:',trader.Trader().output_max_retreat())
+        print('max_retreat:', trader.Trader().output_max_retreat())
 

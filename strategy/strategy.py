@@ -1,12 +1,7 @@
-import pandas as pd
-import time
 import numpy as np
 import talib
-import datetime
-import strategy_original
-import trader
-import indicator
-import datastruct
+from strategy import strategy_original
+from quoter import trader, indicator, datastruct
 
 
 class Strategy(strategy_original.Strategy_original): 
@@ -85,7 +80,7 @@ class Strategy(strategy_original.Strategy_original):
         self.trader.update_dynamic_retreat()
     
     #开始滚动
-    def strategy_rolling(self,ticker = datastruct.Ticker()):
+    def strategy_rolling(self, ticker = datastruct.Ticker()):
         
         self.update_trader_data(ticker)
 

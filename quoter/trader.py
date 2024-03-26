@@ -1,4 +1,4 @@
-import datastruct
+from quoter import datastruct
 import pandas as pd
 
 class Trader:
@@ -21,7 +21,7 @@ class Trader:
     #动态回撤率 datastruct.DynamicRetreat()
     dynamic_retreat_vec = []
 
-    def input_ticker(self,ticker = datastruct.Ticker()):
+    def input_ticker(self, ticker = datastruct.Ticker()):
         self.tickers.append(ticker)
 
     def input_initial_capital(self,initial_capital):
@@ -42,16 +42,19 @@ class Trader:
 
             if self.market_info.if_open == False and self.market_info.if_close == False:
                 if not self.dynamic_equity_vec:
-                    self.dynamic_equity_vec.append(datastruct.DynamicEquity(self.tickers[-1].date,self.tickers[-1].time,
-                    self.market_info.initial_capital))
+                    self.dynamic_equity_vec.append(
+                        datastruct.DynamicEquity(self.tickers[-1].date, self.tickers[-1].time,
+                                                 self.market_info.initial_capital))
                 else:
-                    self.dynamic_equity_vec.append(datastruct.DynamicEquity(self.tickers[-1].date,self.tickers[-1].time,
-                    self.dynamic_equity_vec[-1].dynamic_equity))
+                    self.dynamic_equity_vec.append(
+                        datastruct.DynamicEquity(self.tickers[-1].date, self.tickers[-1].time,
+                                                 self.dynamic_equity_vec[-1].dynamic_equity))
 
             else:
                 if not self.dynamic_equity_vec:
-                    self.dynamic_equity_vec.append(datastruct.DynamicEquity(self.tickers[-1].date,self.tickers[-1].time,
-                    self.market_info.initial_capital))
+                    self.dynamic_equity_vec.append(
+                        datastruct.DynamicEquity(self.tickers[-1].date, self.tickers[-1].time,
+                                                 self.market_info.initial_capital))
                 else :
                     self.dynamic_equity_vec.append(datastruct.DynamicEquity(
                         self.tickers[-1].date,self.tickers[-1].time,self.dynamic_equity_vec[-1].dynamic_equity
@@ -223,7 +226,8 @@ class Trader:
             return
         else:
         
-            self.delv_order_vec.append(datastruct.DelvOrder(self.tickers[-1].date,self.tickers[-1].time,"buy","close",input_number,self.tickers[-1].close))
+            self.delv_order_vec.append(
+                datastruct.DelvOrder(self.tickers[-1].date, self.tickers[-1].time, "buy", "close", input_number, self.tickers[-1].close))
     
             if self.market_info.market_amount == input_number:
                 self.market_info.direction = datastruct.Direction.Empty
@@ -248,7 +252,8 @@ class Trader:
             return
         else:
         
-            self.delv_order_vec.append(datastruct.DelvOrder(self.tickers[-1].date,self.tickers[-1].time,"sell","close",input_number,self.tickers[-1].close))
+            self.delv_order_vec.append(
+                datastruct.DelvOrder(self.tickers[-1].date, self.tickers[-1].time, "sell", "close", input_number, self.tickers[-1].close))
     
             if self.market_info.market_amount == input_number:
                 self.market_info.direction = datastruct.Direction.Empty
@@ -264,7 +269,8 @@ class Trader:
     def buy(self,input_number):
 
         if self.market_info.direction == datastruct.Direction.Empty:
-            self.delv_order_vec.append(datastruct.DelvOrder(self.tickers[-1].date,self.tickers[-1].time,"buy","open",input_number,self.tickers[-1].close))
+            self.delv_order_vec.append(
+                datastruct.DelvOrder(self.tickers[-1].date, self.tickers[-1].time, "buy", "open", input_number, self.tickers[-1].close))
 
             self.market_info.direction = datastruct.Direction.Long
             self.market_info.open_price = self.tickers[-1].close
@@ -277,7 +283,8 @@ class Trader:
 
         elif self.market_info.direction == datastruct.Direction.Long:
         
-            self.delv_order_vec.append(datastruct.DelvOrder(self.tickers[-1].date,self.tickers[-1].time,"buy","open",input_number,self.tickers[-1].close))
+            self.delv_order_vec.append(
+                datastruct.DelvOrder(self.tickers[-1].date, self.tickers[-1].time, "buy", "open", input_number, self.tickers[-1].close))
 
             self.market_info.open_price = (self.market_info.open_price*self.market_info.market_amount + self.tickers[-1].close*input_number)/(self.market_info.market_amount+input_number)
             self.market_info.market_amount += input_number
@@ -290,7 +297,8 @@ class Trader:
         else:
             self.buytocover(self.market_info.market_amount)
 
-            self.delv_order_vec.append(datastruct.DelvOrder(self.tickers[-1].date,self.tickers[-1].time,"buy","open",input_number,self.tickers[-1].close))
+            self.delv_order_vec.append(
+                datastruct.DelvOrder(self.tickers[-1].date, self.tickers[-1].time, "buy", "open", input_number, self.tickers[-1].close))
 
 
             self.market_info.direction = datastruct.Direction.Long
@@ -305,7 +313,8 @@ class Trader:
     def sellshort(self,input_number):
 
         if self.market_info.direction == datastruct.Direction.Empty:
-            self.delv_order_vec.append(datastruct.DelvOrder(self.tickers[-1].date,self.tickers[-1].time,"sell","open",input_number,self.tickers[-1].close))
+            self.delv_order_vec.append(
+                datastruct.DelvOrder(self.tickers[-1].date, self.tickers[-1].time, "sell", "open", input_number, self.tickers[-1].close))
 
             self.market_info.direction = datastruct.Direction.Short
             self.market_info.open_price = self.tickers[-1].close
@@ -318,7 +327,8 @@ class Trader:
 
         elif self.market_info.direction == datastruct.Direction.Short:
         
-            self.delv_order_vec.append(datastruct.DelvOrder(self.tickers[-1].date,self.tickers[-1].time,"sell","open",input_number,self.tickers[-1].close))
+            self.delv_order_vec.append(
+                datastruct.DelvOrder(self.tickers[-1].date, self.tickers[-1].time, "sell", "open", input_number, self.tickers[-1].close))
 
             self.market_info.open_price = (self.market_info.open_price*self.market_info.market_amount + self.tickers[-1].close*input_number)/(self.market_info.market_amount+input_number)
             self.market_info.market_amount += input_number
@@ -331,7 +341,8 @@ class Trader:
         else:
             self.sell(self.market_info.market_amount)
 
-            self.delv_order_vec.append(datastruct.DelvOrder(self.tickers[-1].date,self.tickers[-1].time,"sell","open",input_number,self.tickers[-1].close))
+            self.delv_order_vec.append(
+                datastruct.DelvOrder(self.tickers[-1].date, self.tickers[-1].time, "sell", "open", input_number, self.tickers[-1].close))
 
 
             self.market_info.direction = datastruct.Direction.Short

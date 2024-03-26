@@ -1,10 +1,7 @@
-import controller
-import strategy_original
+from controller import controller
 
 #导入策略
-import strategy
-import strategy_cta
-import strategy_boll
+from strategy import strategy
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -35,4 +32,3 @@ if __name__ == "__main__":
 
     #输出策略组合的动态权益  
     # controller.total_dynamic_equity()
-    

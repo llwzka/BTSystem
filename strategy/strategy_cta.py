@@ -1,6 +1,4 @@
-import trader
-import indicator
-import datastruct
+from quoter import trader, indicator, datastruct
 import strategy_original
 
 
@@ -51,7 +49,7 @@ class Strategy(strategy_original.Strategy_original):
         return 1
 
     #开始滚动
-    def strategy_rolling(self,ticker = datastruct.Ticker()):
+    def strategy_rolling(self, ticker = datastruct.Ticker()):
         
         self.update_trader_data(ticker)
 

@@ -1,9 +1,4 @@
-import trader
-import indicator
-import datastruct
-import pandas as pd
-import time
-import numpy as np
+from quoter import trader, indicator, datastruct
 import strategy_original
 
 
@@ -94,7 +89,7 @@ class Strategy(strategy_original.Strategy_original):
         self.trader.input_contract_info(contract_info)
 
     #开始滚动
-    def strategy_rolling(self,ticker = datastruct.Ticker()):
+    def strategy_rolling(self, ticker = datastruct.Ticker()):
         
         self.update_trader_data(ticker)
 
@@ -103,7 +98,7 @@ class Strategy(strategy_original.Strategy_original):
         self.main_computation()
 
     #更新交易段数据
-    def update_trader_data(self,ticker = datastruct.Ticker()):
+    def update_trader_data(self, ticker = datastruct.Ticker()):
         #更新行情数据
         self.trader.input_ticker(ticker)  
 
@@ -124,8 +119,8 @@ class Strategy(strategy_original.Strategy_original):
         close = float(self.trader.tickers[-1].close)
         self.close_series.append(close)
 
-        bollingerband_up = indicator.Bollinger().Up(self.close_series,self.bollinger_window,self.std_multi)
-        bollingerband_down = indicator.Bollinger().Down(self.close_series,self.bollinger_window,self.std_multi)
+        bollingerband_up = indicator.Bollinger().Up(self.close_series, self.bollinger_window, self.std_multi)
+        bollingerband_down = indicator.Bollinger().Down(self.close_series, self.bollinger_window, self.std_multi)
         # std_data = np.std(self.close_series[-self.bollinger_window:],ddof = 1)
         # mean_data = np.mean(self.close_series[-self.bollinger_window:])
 

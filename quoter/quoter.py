@@ -1,4 +1,4 @@
-import datastruct
+from quoter import datastruct
 import pandas as pd
 import datetime
 
@@ -35,11 +35,11 @@ class Quoter:
     def read_contract_info(self,contract_name,strategy_name):
         info = self.contract_info[contract_name]
         return datastruct.ContractInfo(strategy_name,
-                             info["margin_ratio"],
-                             info["contract_multiplier"],
-                             info["contract_minimal_unit"],
-                             info["fees"],
-                             info["slippage"])
+                                       info["margin_ratio"],
+                                       info["contract_multiplier"],
+                                       info["contract_minimal_unit"],
+                                       info["fees"],
+                                       info["slippage"])
 
     #根据策略的要求返回相应的策略定制分钟行情
     def get_customized_quoter_data(self,customized_tickers,test_info) :
