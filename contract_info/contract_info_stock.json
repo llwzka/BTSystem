@@ -1,0 +1,15 @@
+{
+    "all":
+    {
+        "margin_ratio": 0,
+        "contract_multiplier": 1,
+        "contract_minimal_unit": 0.01,
+        "fees": 0.0003,
+        "slippage": 0.875,
+        "trade_time":
+        [
+            ["9:30:00", "11:30:00"],
+            ["13:00:00", "15:00:00"]
+        ]
+    }
+}

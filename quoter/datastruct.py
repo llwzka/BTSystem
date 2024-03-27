@@ -8,7 +8,7 @@ from enum import Enum, unique
 #读取json文件
 class JsonConf:
     def load(self,path): 
-        #调用例子print(tJsonConf().load("/home/lolfish/Desktop/test/contract_info/contract_info.json"))
+        #调用例子print(tJsonConf().load("/home/lolfish/Desktop/test/contract_info/contract_info_fut.json"))
         if not os.path.exists(str(path)):
             with open(str(path), 'w') as json_file:
                 pass       
